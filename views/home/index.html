@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/color.css" />
+    <title>mSelf</title>
+
+</head>
+<body class="bg">
+
+    <script>window.$ = require('../../node_modules/jquery/dist/jquery.min.js');</script>
+    <script src="js/db.js"></script>
+    <script src="js/events-renderer.js"></script>
+
+    <nav class="navbar bg-nav">
+        <a class="navbar-brand" href="#" onclick="inicio()">
+            Inicio
+        </a>
+
+        <button type="button" class="btn btn-default" aria-label="Left Align" onclick="novo()">
+            Novo
+        </button>
+    </nav>
+
+    <div class="container" id="lista"></div>
+</body>
+
+</html> 

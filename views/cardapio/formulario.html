@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/color.css" />
+
+    <title>Cardápio</title>
+</head>
+<body class="bg">
+
+    <script>window.$ = require('../../node_modules/jquery/dist/jquery.min.js');</script>
+
+    <nav class="navbar bg-nav">
+        <a class="navbar-brand" href="#" onclick="inicio()">
+            Inicio
+        </a>
+
+        <button type="button" class="btn btn-default" aria-label="Left Align" onclick="salvar()">
+            Salvar
+        </button>
+    </nav>
+    
+    <main class="container">
+        
+        <section class="row">
+
+            <div class="col-8">
+                
+                <form>
+                    <div class="form-group">
+                        <label for="codigo-prato">Codigo do prato</label>
+                        <input type="text" class="form-control" id="codigo-prato" placeholder="Codigo do prato">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="titulo-prato">Titulo</label>
+                        <input type="text" class="form-control" id="titulo-prato" placeholder="Titulo">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="descricao-prato">Descrição</label>
+                        <textarea class="form-control" id="descricao-prato" rows="3" placeholder="Descrição"></textarea>
+                    </div>
+        
+                    <div class="form-group row"> 
+                        <label for="valor-prato" class="col-sm-2 col-form-label">Valor R$</label>
+                        <div class="col-sm-10">
+                            <input type="Number" class="form-control" id="valor-prato" placeholder="0.00" min="0" value="0" step="0.01">
+                        </div>
+                    </div>
+        
+                    <div class="form-group row">
+                        <label for="desconto-prato" class="col-sm-2 col-form-label">Desconto %</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="desconto-prato" placeholder="0" min="0" value="0" step="1">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="desconto-prato-real" class="col-sm-2 col-form-label">Desconto R$</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="desconto-prato-real" placeholder="0" min="0" value="0" step="1" readonly>
+                        </div>
+                    </div>
+        
+                    <div class="form-group row">
+                        <label for="preco-prato" class="col-sm-2 col-form-label">Preço R$</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="preco-prato" placeholder="0.00" min="0" value="0" step="0.01" readonly>
+                        </div>
+                    </div>
+        
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="img-prato" accept=".png, .jpg, .jpeg" onchange="inputImagem()">
+                        <label class="custom-file-label" id="img-prato-label" for="img-prato"></label>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-4 demo">
+
+                <h3 class="text-center" id="titulo-prato-demo">Titulo: <span></span></h3>
+                <img id="img-prato-demo" class="img-thumbnail rounded mx-auto d-block img-prato-demo">
+                <p id="descricao-prato-demo" class="text-center">Descrição: <span></span></p>
+                <p id="preco-prato-demo" class="text-center">Preço: R$ <span></span></p>
+            </div>
+
+        </section>
+    </main>
+    
+    <script src="js/formulario.js"></script>
+</body>
+
+</html>
